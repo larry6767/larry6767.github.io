@@ -97,8 +97,8 @@ $(document).ready(function() {
         // create map-marker style
         myMark.iconStyle = new YMaps.IconStyle();
         myMark.iconStyle.href = "https://larry6767.github.io//img/map-marker.svg";
-        myMark.iconStyle.size = new YMaps.Point(64, 64);
-        myMark.iconStyle.offset = new YMaps.Point(-32, -63);
+        myMark.iconStyle.size = new YMaps.Point(32, 32);
+        myMark.iconStyle.offset = new YMaps.Point(-16, -16);
 
         var placemark = new YMaps.Placemark(new YMaps.GeoPoint(markGeo1X, markGeo1Y), { style: myMark });
         var placemark2 = new YMaps.Placemark(new YMaps.GeoPoint(markGeo2X, markGeo2Y), { style: myMark });
