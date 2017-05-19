@@ -7,7 +7,7 @@ $(document).ready(function() {
 
   $headerLinks.each(function(i) {
     var url = location.href.substring(location.href.lastIndexOf('/'));
-    var href = $(this).attr('href') + '';
+    var href = $(this).attr('data-href') + '';
     href = href.substring(href.indexOf('.') + 1);
 
     if (url === href) {
@@ -41,6 +41,16 @@ $(document).ready(function() {
     });
   }());
 
+  // temporary navigastion
+
+  $('.x-link-hotel').on('click', function () {
+    location.href = './hotel.html';
+  });
+
+  $('.x-link-restaurants').on('click', function () {
+    location.href = './restaurants.html';
+  });
+
   // first-screen-slider
 
   $('.x-first-screen-slider').slick({
@@ -65,6 +75,12 @@ $(document).ready(function() {
           easing: "swing"
       });
       return false;
+    } else {
+      var href = $(this).attr('data-href').toString();
+      if (href === './index.html') {
+        href = './';
+      }
+      location.href = href;
     }
   });
 
@@ -84,10 +100,6 @@ $(document).ready(function() {
         var markGeo2Y = mapId.attr('mark-geo2-y');
         var markGeo3X = mapId.attr('mark-geo3-x');
         var markGeo3Y = mapId.attr('mark-geo3-y');
-
-        // var hint1 = mapId.attr('hint1');
-        // var markGeo1X = mapId.attr('mark-geo1-x');
-        // var markGeo1Y = mapId.attr('mark-geo1-y');
 
         map.setCenter(new YMaps.GeoPoint(centerX, centerY), 13);
 
@@ -154,5 +166,45 @@ $(document).ready(function() {
     $('.x-target-lightbox', $localContext).click();
   });
 
+  // restaurants page
+
+  var $restaurantsContext = $('.x-restaurants-page');
+
+  $('.x-more', $restaurantsContext).on('click', function () {
+    $('.x-more-text', $restaurantsContext).slideToggle('restaurants-description__text--active');
+    $(this).toggleClass('resraurants-description__more--active');
+  });
+
+  $('.x-restaurants-menu-slider').slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    arrows: false
+  });
+
+});
+
+window.addEventListener('scroll', function (event) {
+
+  var depth, i, layer, layers, len, movement, topDistance, translate3d;
+  topDistance = this.pageYOffset;
+  layers = document.querySelectorAll('[data-type=\'parallax\']');
+
+  for (i = 0, len = layers.length; i < len; i++) {
+
+    layer = layers[i];
+    depth = layer.getAttribute('data-depth');
+    movement = -(topDistance * depth);
+    translate3d = 'translate3d(0, ' + movement + 'px, 0)';
+    layer.style['-webkit-transform'] = translate3d;
+    layer.style['-moz-transform'] = translate3d;
+    layer.style['-ms-transform'] = translate3d;
+    layer.style['-o-transform'] = translate3d;
+    layer.style.transform = translate3d;
+  }
 
 });

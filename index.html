@@ -12,38 +12,38 @@
           <nav class="main-navigation">
             <ul class="main-navigation__mobile-navigation mobile-navigation x-mobile-navigation">
               <li class="mobile-navigation__item">
-                <a href="" class="mobile-navigation__link">Главная</a>
+                <a href="./" data-href="./" class="mobile-navigation__link">Главная</a>
               </li>
               <li class="mobile-navigation__item">
-                <a href="#restaurants" class="mobile-navigation__link x-scroll">Рестораны</a>
+                <a href="#restaurants" data-href="./restaurants.html" class="mobile-navigation__link x-scroll">Рестораны</a>
               </li>
               <li class="mobile-navigation__item">
-                <a href="" class="mobile-navigation__link">Гостиница</a>
+                <a href="#hotel" data-href="./hotel.html" class="mobile-navigation__link">Гостиница</a>
               </li>
               <li class="mobile-navigation__item">
-                <a href="#hotel" class="mobile-navigation__link x-scroll">Организация праздников</a>
+                <a href="#organization" data-href="./index.html" class="mobile-navigation__link x-scroll">Организация праздников</a>
               </li>
               <li class="mobile-navigation__item">
-                <a href="" class="mobile-navigation__link">Новости</a>
+                <a href="./news.html" data-href="./news.html" class="mobile-navigation__link">Новости</a>
               </li>
               <li class="mobile-navigation__item">
-                <a href="" class="mobile-navigation__link">Контакты</a>
+                <a href="./contacts.html" data-href="./contacts.html" class="mobile-navigation__link">Контакты</a>
               </li>
               <li class="mobile-navigation__item">
-                <a href="" class="mobile-navigation__link">Вакансии</a>
+                <a href="./vacancies.html" data-href="./vacancies.html" class="mobile-navigation__link">Вакансии</a>
               </li>
             </ul>
             
             <div class="main-navigation__wrapper">
               <ul class="main-navigation__list">
                 <li class="main-navigation__item">
-                  <a class="main-navigation__link x-header-link" href="./">Главная</a>
+                  <a class="main-navigation__link x-header-link" href="./" data-href="./">Главная</a>
                 </li>
                 <li class="main-navigation__item">
-                  <a class="main-navigation__link x-header-link x-scroll" href="#restaurants">Рестораны</a>
+                  <a class="main-navigation__link x-header-link x-scroll" href="#restaurants" data-href="./restaurants.html">Рестораны</a>
                 </li>
                 <li class="main-navigation__item">
-                  <a class="main-navigation__link x-header-link x-scroll" href="#hotel">Гостиница</a>
+                  <a class="main-navigation__link x-header-link x-scroll" href="#hotel" data-href="./hotel.html">Гостиница</a>
                 </li>
               </ul>
         
@@ -511,10 +511,10 @@
         
               <ul class="main-navigation__list">
                 <li class="main-navigation__item main-navigation__item--long">
-                  <a class="main-navigation__link x-header-link x-scroll" href="#organization">Организация праздников</a>
+                  <a class="main-navigation__link x-header-link x-scroll" href="#organization" data-href="./index.html">Организация праздников</a>
                 </li>
                 <li class="main-navigation__item main-navigation__item--tablet-hide">
-                  <a class="main-navigation__link x-header-link" href="./news.html">Новости</a>
+                  <a class="main-navigation__link x-header-link" href="./news.html" data-href="./news.html">Новости</a>
                 </li>
                 <li class="main-navigation__item main-navigation__item--more x-more-link">
                   <div class="main-navigation__link x-header-link">еще</div>
@@ -523,10 +523,10 @@
                       <a class="main-navigation__link x-header-link" href="./news.html">Новости</a>
                     </li>
                     <li class="navigation-more__item">
-                      <a class="main-navigation__link x-header-link" href="./contacts.html">Контакты</a>
+                      <a class="main-navigation__link x-header-link" href="./contacts.html" data-href="./contacts.html">Контакты</a>
                     </li>
                     <li class="navigation-more__item">
-                      <a class="main-navigation__link x-header-link" href="./vacancies.html">Вакансии</a>
+                      <a class="main-navigation__link x-header-link" href="./vacancies.html" data-href="./vacancies.html">Вакансии</a>
                     </li>
                   </ul>
                 </li>
@@ -646,7 +646,7 @@
 
   <div class="restaurants__wrapper">
     <div class="restaurants__item">
-      <div class="restaurants__frame-wrapper">
+      <div class="restaurants__frame-wrapper x-link-restaurants">
         <svg class="restaurants__frame">
           <g mask="url(#mask1)">
             <image class="restaurants__img" xlink:href="img/restaurant.jpg" width="100%" height="100%">
@@ -665,7 +665,7 @@
       <a href="#" class="restaurants__phone-link">+7 (800) 000-00-00</a>
     </div>
     <div class="restaurants__item">
-      <div class="restaurants__frame-wrapper">
+      <div class="restaurants__frame-wrapper x-link-restaurants">
         <svg class="restaurants__frame">
           <g mask="url(#mask2)">
             <image class="restaurants__img" xlink:href="img/restaurant.jpg" width="100%" height="100%">
@@ -684,7 +684,7 @@
       <a href="#" class="restaurants__phone-link">+7 (800) 000-00-00</a>
     </div>
     <div class="restaurants__item">
-      <div class="restaurants__frame-wrapper">
+      <div class="restaurants__frame-wrapper x-link-restaurants">
         <svg class="restaurants__frame">
           <g mask="url(#mask3)">
             <image class="restaurants__img" xlink:href="img/restaurant.jpg" width="100%" height="100%">
@@ -882,7 +882,7 @@
   </div>
 </section>
 <section class="hotel" id="hotel">
-  <div class="hotel__title-wrapper">
+  <div class="hotel__title-wrapper x-link-hotel">
     <svg class="hotel__frame">
       <g mask="url(#mask4)">
         <image class="hotel__title-img" xlink:href="img/hotel.svg" width="100%" height="100%">
